@@ -1,6 +1,2 @@
 # Car
-# Car
-# Car
-# Car
-# Car
-# Car
+Learning Java / adding new things
