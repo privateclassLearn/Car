@@ -6,8 +6,6 @@ import java.util.Objects;
 import java.util.Random;
 import java.util.Scanner;
 
-import static carpackage.CarGame.game;
-
 public class Car {
     public static void main(String[] args) {
         playGame();
@@ -60,7 +58,6 @@ public class Car {
         int power2 = userCar.power;
         int totalPower = totalCarPower(power0, power2, power2);
         System.out.println("The total power of " + myCar.model + " " + myOldCar.model + " " + userCar.model + " is: " + totalPower + " kilowatt.");
-
 
         // beep is a method (defined in the CarFactory class and the method is called like that
         userCar.beep();
