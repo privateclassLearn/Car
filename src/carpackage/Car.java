@@ -6,10 +6,12 @@ import java.util.Objects;
 import java.util.Random;
 import java.util.Scanner;
 
+import static carpackage.CarGame.game;
+
 public class Car {
     public static void main(String[] args) {
 // Calling the class CarGame.java
-        game();
+        playGame();
         CarFactory myCar = new CarFactory();
         myCar.producer = "Dacia";
         myCar.color = "comete grey";
@@ -78,12 +80,21 @@ public class Car {
     }
 
     // Below ist the car game method
-    static void game() {
+    static void playGame() {
         System.out.println("Do you want o play the game? y/n: ");
         Scanner playGame = new Scanner(System.in);
         String playing = playGame.nextLine();
         System.out.println("Your answer has been: " + playing);
         if (Objects.equals(playing, "y")) {
+            game();
+        }
+                    else {
+                System.out.println("Thank you!");
+            }
+    }
+    static void game() {
+
+
             System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
             System.out.println("+                   The Car Power Guessing Game                                 +");
             System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
@@ -108,9 +119,18 @@ public class Car {
             System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
             System.out.println("+                   Game over                                                   +");
             System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+
+            // Scanner playGame = new Scanner(System.in);
+            System.out.println("Do you want o play the game? y/n: ");
+            Scanner playGame = new Scanner(System.in);
+            String playingEnd = playGame.nextLine();
+            System.out.println("Your answer has been: " + playingEnd);
+            if (Objects.equals(playingEnd, "y")) {
+                game();
+            }
+            else {
+                System.out.println("Thank you!");
+            }
         }
-        else {
-            System.out.println("Thank you!");
-        }
+
     }
-}
