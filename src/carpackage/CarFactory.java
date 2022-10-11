@@ -8,8 +8,9 @@ public class CarFactory {
     String color;
     int power;
     String engine;
-// beep is a method and can be used to execute the commands in the curly brackets
+
+    // beep is a method and can be used to execute the commands in the curly brackets
     void beep() {
-        System.out.println("This horn of this " +model + " is working: BEEP!");
+        System.out.println("This horn of this " + model + " is working: BEEP!");
     }
 }
