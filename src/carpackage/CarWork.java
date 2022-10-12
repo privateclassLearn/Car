@@ -3,6 +3,9 @@ package carpackage;
 import java.util.Scanner;
 
 public class CarWork {
+    public static CarFactory userCar;
+    public static CarFactory myCar;
+
     public static void carWorker() {
 
         CarFactory myCar = new CarFactory();
@@ -10,12 +13,14 @@ public class CarWork {
         myCar.color = "comete grey";
         myCar.engine = "gasoline";
         myCar.model = "Duster 2";
+        myCar.age = 2;
         myCar.power = 96;
 
         CarFactory myOldCar = new CarFactory();
         myOldCar.producer = "VW";
         myOldCar.color = "red";
         myOldCar.engine = "gasoline";
+        myOldCar.age = 10;
         myOldCar.model = "Golf 2";
         myOldCar.power = 70;
 
@@ -42,6 +47,10 @@ public class CarWork {
         System.out.print("Please enter the power of your car: ");
         userCar.power = userInput.nextInt();
         System.out.println("You have entered " + userCar.power + " as the power of your car");
+
+        System.out.print("Please enter the age of your car: ");
+        userCar.age = userInput.nextInt();
+        System.out.println("You have entered " + userCar.age + " as the age of your car");
 
         System.out.println("We are checking now if your " + userCar.model + " has more power than my " + myCar.model);
         if (userCar.power > myCar.power) {

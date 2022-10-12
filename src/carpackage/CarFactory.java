@@ -6,6 +6,7 @@ public class CarFactory {
     String producer;
     String model;
     String color;
+    int age;
     int power;
     String engine;
 
