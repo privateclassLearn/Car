@@ -35,7 +35,7 @@ public class CarWork {
         userCar.color = userInput.nextLine();
         System.out.println("You have entered " + userCar.color + " as the color of your car");
 
-        System.out.print("Please enter the type of the engine of your car: ");
+        System.out.print("Please enter the type of the engine of your car gasoline / diesel / electric: ");
         userCar.engine = userInput.nextLine();
         System.out.println("You have entered " + userCar.engine + " as the type of the engine of your car");
 
