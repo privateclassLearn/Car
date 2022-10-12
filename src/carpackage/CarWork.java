@@ -9,60 +9,60 @@ public class CarWork {
     public static void carWorker() {
 
         CarFactory myCar = new CarFactory();
-        myCar.producer = "Dacia";
-        myCar.color = "comete grey";
+        myCar.setProducer("Dacia");
+        myCar.setColor("comete grey");
         myCar.engine = "gasoline";
-        myCar.model = "Duster 2";
-        myCar.age = 2;
-        myCar.power = 96;
+        myCar.setModel("Duster 2");
+        myCar.setAge(2);
+        myCar.setPower(96);
 
         CarFactory myOldCar = new CarFactory();
-        myOldCar.producer = "VW";
-        myOldCar.color = "red";
+        myOldCar.setProducer("VW");
+        myOldCar.setColor("red");
         myOldCar.engine = "gasoline";
-        myOldCar.age = 10;
-        myOldCar.model = "Golf 2";
-        myOldCar.power = 70;
+        myOldCar.setAge(10);
+        myOldCar.setModel("Golf 2");
+        myOldCar.setPower(70);
 
         // The Scanner class has been imported -> see the beginning of the class
         Scanner userInput = new Scanner(System.in);
 
         System.out.print("Please enter your car producer: ");
         CarFactory userCar = new CarFactory();
-        userCar.producer = userInput.nextLine();
-        System.out.println("You have entered " + userCar.producer + " as the producer of your car");
+        userCar.setProducer(userInput.nextLine());
+        System.out.println("You have entered " + userCar.getProducer() + " as the producer of your car");
 
         System.out.print("Please enter your car model: ");
-        userCar.model = userInput.nextLine();
-        System.out.println("You have entered " + userCar.model + " as the model of your car");
+        userCar.setModel(userInput.nextLine());
+        System.out.println("You have entered " + userCar.getModel() + " as the model of your car");
 
         System.out.print("Please enter the color of your car: ");
-        userCar.color = userInput.nextLine();
-        System.out.println("You have entered " + userCar.color + " as the color of your car");
+        userCar.setColor(userInput.nextLine());
+        System.out.println("You have entered " + userCar.getColor() + " as the color of your car");
 
         System.out.print("Please enter the type of the engine of your car gasoline / diesel / electric: ");
         userCar.engine = userInput.nextLine();
         System.out.println("You have entered " + userCar.engine + " as the type of the engine of your car");
 
         System.out.print("Please enter the power of your car: ");
-        userCar.power = userInput.nextInt();
-        System.out.println("You have entered " + userCar.power + " as the power of your car");
+        userCar.setPower(userInput.nextInt());
+        System.out.println("You have entered " + userCar.getPower() + " as the power of your car");
 
         System.out.print("Please enter the age of your car: ");
-        userCar.age = userInput.nextInt();
-        System.out.println("You have entered " + userCar.age + " as the age of your car");
+        userCar.setAge(userInput.nextInt());
+        System.out.println("You have entered " + userCar.getAge() + " as the age of your car");
 
-        System.out.println("We are checking now if your " + userCar.model + " has more power than my " + myCar.model);
-        if (userCar.power > myCar.power) {
+        System.out.println("We are checking now if your " + userCar.getModel() + " has more power than my " + myCar.getModel());
+        if (userCar.getPower() > myCar.getPower()) {
             System.out.println("Your car has more power than my car!");
         } else {
             System.out.println("My car has more power than your car!");
         }
-        int power0 = myCar.power;
-        int power1 = myOldCar.power;
-        int power2 = userCar.power;
+        int power0 = myCar.getPower();
+        int power1 = myOldCar.getPower();
+        int power2 = userCar.getPower();
         int totalPower = totalCarPower(power0, power2, power2);
-        System.out.println("The total power of " + myCar.model + " " + myOldCar.model + " " + userCar.model + " is: " + totalPower + " kilowatt.");
+        System.out.println("The total power of " + myCar.getModel() + " " + myOldCar.getModel() + " " + userCar.getModel() + " is: " + totalPower + " kilowatt.");
 
         // beep is a method (defined in the CarFactory class and the method is called like that
         userCar.beep();
