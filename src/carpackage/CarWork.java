@@ -2,14 +2,14 @@ package carpackage;
 
 import java.util.Scanner;
 
-public class CarWork extends CarSuperClass {
+public class CarWork extends CarSuperClass implements CarShowOil{
     public static CarFactory userCar;
     public static CarFactory myCar;
 
     public static void carWorker() {
 
         CarSuperClass genericCar = new CarSuperClass();
-        genericCar.key();
+        CarSuperClass.key();
         CarFactory myCar = new CarFactory();
         myCar.setProducer("Dacia");
         myCar.setColor("comete grey");
@@ -17,6 +17,7 @@ public class CarWork extends CarSuperClass {
         myCar.setModel("Duster 2");
         myCar.setAge(2);
         myCar.setPower(96);
+        myCar.genericCar.setWheelType("summer wheels");
         // The following part is including the genericCar from the super class CarSuperClass
         myCar.genericCar.setNumberOfDoors(5);
         System.out.println("Number of my car (genericCar) doors: " + myCar.genericCar.getNumberOfDoors());
@@ -28,6 +29,7 @@ public class CarWork extends CarSuperClass {
         myOldCar.setAge(10);
         myOldCar.setModel("Golf 2");
         myOldCar.setPower(70);
+        myOldCar.genericCar.setWheelType("winter wheels");
 
         // The Scanner class has been imported -> see the beginning of the class
         Scanner userInput = new Scanner(System.in);
@@ -77,6 +79,7 @@ public class CarWork extends CarSuperClass {
         int returnNumberOfDoors = genericCar.showNumberOfDoors(myCar.genericCar.getNumberOfDoors());
         System.out.println("Here is the numer of doors of my car using the super class method: " + returnNumberOfDoors);
 
+
 // Abbreviation to create System.out.println(); is: sout + tab
 
     }
@@ -87,5 +90,12 @@ public class CarWork extends CarSuperClass {
     private static int totalCarPower(int power0, int power1, int power2) {
         return power0 + power1 + power2;
     }
+    public static void key() {
+        System.out.println("OVERWRITING THE SUPER CLASS METHOD -> All of our cars have an electronic key.");
+    }
 
+    @Override
+    public void showOil() {
+        System.out.println("Check the level of the oil!");
+    }
 }

@@ -20,7 +20,7 @@ public class CarSuperClass {
         this.wheelType = wheelType;
     }
 
-    public void key() {
+    public static void key() {
         System.out.println("COMES FROM SUPER CLASS -> All of our cars have an electronic key.");
     }
     public int showNumberOfDoors(int numberOfDoors) {
