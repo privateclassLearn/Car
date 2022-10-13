@@ -2,12 +2,14 @@ package carpackage;
 
 import java.util.Scanner;
 
-public class CarWork {
+public class CarWork extends CarSuperClass {
     public static CarFactory userCar;
     public static CarFactory myCar;
 
     public static void carWorker() {
 
+        CarSuperClass genericCar = new CarSuperClass();
+        genericCar.key();
         CarFactory myCar = new CarFactory();
         myCar.setProducer("Dacia");
         myCar.setColor("comete grey");
@@ -15,6 +17,9 @@ public class CarWork {
         myCar.setModel("Duster 2");
         myCar.setAge(2);
         myCar.setPower(96);
+        // The following part is including the genericCar from the super class CarSuperClass
+        myCar.genericCar.setNumberOfDoors(5);
+        System.out.println("Number of my car (genericCar) doors: " + myCar.genericCar.getNumberOfDoors());
 
         CarFactory myOldCar = new CarFactory();
         myOldCar.setProducer("VW");
@@ -68,6 +73,9 @@ public class CarWork {
         userCar.beep();
         myCar.beep();
         myOldCar.beep();
+
+        int returnNumberOfDoors = genericCar.showNumberOfDoors(myCar.genericCar.getNumberOfDoors());
+        System.out.println("Here is the numer of doors of my car using the super class method: " + returnNumberOfDoors);
 
 // Abbreviation to create System.out.println(); is: sout + tab
 

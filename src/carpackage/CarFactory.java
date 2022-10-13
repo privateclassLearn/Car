@@ -2,10 +2,12 @@ package carpackage;
 
 // this class is a blueprint / factory defining the parameters for something - a car in this case
 // with the use of this class we can create as many cars as we want
+// +++ extends declares the CarFactory class as a sub class of the CarSuperClass parent class +++
 public class CarFactory {
     private String producer;
     private String model;
-
+    CarSuperClass genericCar = new CarSuperClass();
+       // genericCar.key();
     public String getProducer() {
         return producer;
     }
