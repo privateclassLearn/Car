@@ -4,7 +4,7 @@ import java.util.Objects;
 import java.util.Random;
 import java.util.Scanner;
 
-public class CarGame {
+public abstract class CarGame {
     // We need a method to write something into the class. If we don't use ist, the commands won't be recognized
 // Below ist the car game method
     static void game() {

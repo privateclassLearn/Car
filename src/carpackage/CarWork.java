@@ -2,9 +2,12 @@ package carpackage;
 
 import java.util.Scanner;
 
-public class CarWork extends CarSuperClass implements CarShowOil{
+public class CarWork extends CarSuperClass implements CarShowOil {
     public static CarFactory userCar;
     public static CarFactory myCar;
+    public static void showTheOil() {
+        System.out.println("Measure the oil level!");
+    }
 
     public static void carWorker() {
 
@@ -75,7 +78,7 @@ public class CarWork extends CarSuperClass implements CarShowOil{
         userCar.beep();
         myCar.beep();
         myOldCar.beep();
-
+        showTheOil();
         int returnNumberOfDoors = genericCar.showNumberOfDoors(myCar.genericCar.getNumberOfDoors());
         System.out.println("Here is the numer of doors of my car using the super class method: " + returnNumberOfDoors);
 
@@ -90,12 +93,8 @@ public class CarWork extends CarSuperClass implements CarShowOil{
     private static int totalCarPower(int power0, int power1, int power2) {
         return power0 + power1 + power2;
     }
+
     public static void key() {
         System.out.println("OVERWRITING THE SUPER CLASS METHOD -> All of our cars have an electronic key.");
-    }
-
-    @Override
-    public void showOil() {
-        System.out.println("Check the level of the oil!");
     }
 }
