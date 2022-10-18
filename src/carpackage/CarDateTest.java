@@ -42,6 +42,8 @@ public class CarDateTest {
         LocalDate cRstart = LocalDate.parse(carRentStart);
         LocalDate cRstop = LocalDate.parse(carRentStop);
         duration(cRstart,cRstop);
+        LocalDate bookStart = LocalDate.parse("2022-10-19");
+        comparison(bookStart, cRstart);
 
 
     }
@@ -53,6 +55,18 @@ public class CarDateTest {
                 " months, and " + rental.getDays() +
                 " days. (" + duration + " days total)");
 
+    }
+
+    public static void comparison(LocalDate isBooked, LocalDate wantBook) {
+        int compareValue = isBooked.compareTo(wantBook);
+        if (compareValue > 0) {
+            System.out.println("isBooked / bookStart is latter than " + wantBook);
+        } else if (compareValue < 0) {
+            System.out.println("isBooked / bookStart is earlier than " + wantBook);
+        }
+        else {
+            System.out.println("Both days are equal.");
+        }
     }
 }
 
