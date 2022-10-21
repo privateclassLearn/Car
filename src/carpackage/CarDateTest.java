@@ -51,6 +51,7 @@ public class CarDateTest {
 
         Period rental = Period.between(ding, dong);
         long duration = ChronoUnit.DAYS.between(ding, dong);
+        System.out.println("Rental duration: " + duration + " days.");
         System.out.println("Car rental time " + rental.getYears() + " years, " + rental.getMonths() +
                 " months, and " + rental.getDays() +
                 " days. (" + duration + " days total)");

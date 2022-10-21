@@ -68,7 +68,7 @@ public class CarWork extends CarSuperClass implements CarShowOil{
         int power0 = myCar.getPower();
         int power1 = myOldCar.getPower();
         int power2 = userCar.getPower();
-        int totalPower = totalCarPower(power0, power2, power2);
+        int totalPower = totalCarPower(power0, power1, power2);
         System.out.println("The total power of " + myCar.getModel() + " " + myOldCar.getModel() + " " + userCar.getModel() + " is: " + totalPower + " kilowatt.");
 
         // beep is a method (defined in the CarFactory class and the method is called like that
