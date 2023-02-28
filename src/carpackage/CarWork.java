@@ -77,7 +77,7 @@ public class CarWork extends CarSuperClass implements CarShowOil{
         myOldCar.beep();
 
         int returnNumberOfDoors = genericCar.showNumberOfDoors(myCar.genericCar.getNumberOfDoors());
-        System.out.println("Here is the numer of doors of my car using the super class method: " + returnNumberOfDoors);
+        System.out.println("Here is the number of doors of my car using the super class method: " + returnNumberOfDoors);
 
 
 // Abbreviation to create System.out.println(); is: sout + tab
